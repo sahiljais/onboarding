@@ -1,14 +1,25 @@
 import React from "react";
-import { Flex } from "./styles/Flex";
-import { Step } from "./styles/Step.styled";
+import { Flex } from "./styles/Flex.styled";
+import { Line, Step } from "./styles/Step.styled";
 
-export default function Stepper ({currentStep}) {
+export default function Stepper ({currentStep,updateStep}) {
+
+    const steps = [1,2,3,4];
+
+    const handleClick = (item) => {
+        updateStep(item)
+    }
+
     return(
         <Flex>
-            <Step active={currentStep >=1 ? true : false }>1</Step>
-            <Step active={currentStep >=2 ? true : false }>2</Step>
-            <Step active={currentStep >=3 ? true : false }>3</Step>
-            <Step active={currentStep >=4 ? true : false }>4</Step>
+            {steps.map((item) => {
+                return (
+                    <div style={{position:"relative"}}>
+                        <Step active={currentStep >=item ? true : false } onClick={() => handleClick(item)}>{item}</Step>
+                        {item === 4 ? null : <Line active={currentStep >item ? true : false } />}
+                    </div>    
+                )                
+            })}
         </Flex>
     )
 }
