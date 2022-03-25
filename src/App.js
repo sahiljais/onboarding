@@ -1,15 +1,15 @@
 import './App.css';
-import Form from './components/Form';
 import Navigation from './components/Navigation';
-import Stepper from './components/Stepper';
 import { Container } from './components/styles/Container.styled.js';
+import { StyledImage } from './components/styles/Image.styled';
 import { Title } from './components/styles/Title.styled';
 
 function App() {
   return (
     <Container>
         <Title>
-          Cutshort
+          <StyledImage src={"/logo-new.png"} />
+          <span style={{paddingLeft:"0.5rem"}}>Cutshort</span>
         </Title>
         <Navigation />    
     </Container>
