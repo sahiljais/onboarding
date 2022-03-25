@@ -27,7 +27,8 @@ export default function Form({heading,subHeading,currentStep,updateStep,primaryL
                 <Label>{secondaryLabel}</Label>
                 {currentStep === 2 ? 
                 <Flex>
-                  <FixedInput><SmallText>www.cutshort.com/</SmallText></FixedInput><Input placeholder={secondaryPlaceholder} />
+                  <FixedInput><SmallText>www.cutshort.com/</SmallText></FixedInput>
+                  <Input borderRadius={"0px 5px 5px 0px"} placeholder={secondaryPlaceholder} />
                 </Flex> : <Input placeholder={secondaryPlaceholder} /> }
               </FlexColumn>
               <Button onClick={handleClick}>Create Workspace</Button>
