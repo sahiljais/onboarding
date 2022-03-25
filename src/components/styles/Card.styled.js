@@ -9,7 +9,7 @@ max-width: 8.5rem;
 height: 10rem;
 max-height: 10rem;
 border-radius: 7px;
-margin-right: 1rem;
+margin-right: ${({marginRight}) => marginRight ? marginRight : "1rem"};
 padding:1rem;
 word-break: break-word;
 text-align: left;

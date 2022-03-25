@@ -9,4 +9,5 @@ padding:4rem 3rem 2rem;
 
 export const CardTitle=styled.h2`
 margin: 0.5rem 0rem;
+text-align: center;
 `
